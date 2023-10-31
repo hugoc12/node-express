@@ -16,10 +16,10 @@ server.route('/users')
         response.send(`Chamada HTTP get all`)
     }).post((request, response)=>{
         response.send(`Chamada HTTP post`)
-    }).put(middleCheckId, (request, response)=>{ //Aqui Middle está intermidiando a chamada e execução da functionResponse
+    }).put(middleCheckId, (request, response)=>{
         let id = request.query.id;
         response.send(`Chamada HTTP put ${id}`)
-    }).delete(middleCheckId, (request, response)=>{//Aqui Middle está intermidiando a chamada e execução da functionResponse
+    }).delete(middleCheckId, (request, response)=>{
         let id = request.query.id;
         response.send(`Chamada HTTP delete ${id}`)
     })
